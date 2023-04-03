@@ -16,6 +16,7 @@
 
 <script setup>
 import XmlTag from './XmlTag.vue'
+import CodeLiteral from './CodeLiteral.vue'
 import CodeString from './CodeString.vue'
 import CodeBrackets from "./CodeBrackets.vue"
 
@@ -35,17 +36,15 @@ defineProps({
 <pre v-if="configuration.lang === 'java'">
 repository<CodeBrackets start="(" end=")"><CodeString>{{ data.domain }}</CodeString></CodeBrackets>
 </pre>
+<pre v-else-if="configuration.lang === 'ext'">
+<CodeLiteral>{{ data.domain }}</CodeLiteral>
+</pre>
 <pre v-else-if="configuration.lang === 'xml'">
 <XmlTag name="repository">
   <XmlTag name="id">{{ data.repoId }}</XmlTag>
   <XmlTag name="name">{{ data.title }}</XmlTag>
   <XmlTag name="url">{{ data.domain }}</XmlTag>
 </XmlTag>
-</pre>
-<pre v-else-if="configuration.lang === 'groovy'">
-maven <CodeBrackets start="{" end="}">
-    url <CodeString>{{ data.domain }}</CodeString>
-</CodeBrackets>
 </pre>
 <pre v-else-if="configuration.lang === 'kotlin'">
 maven <CodeBrackets start="{" end="}">

@@ -37,9 +37,9 @@ const props = defineProps({
 const title = ref('')
 const configurations = [
   { name: 'bld', lang: 'java' },
+  { name: 'bld Extension', lang: 'ext' },
   { name: 'Maven', lang: 'xml' },
-  { name: 'Gradle Kotlin', lang: 'kotlin' },
-  { name: 'Gradle Groovy', lang: 'groovy' }
+  { name: 'Gradle Kotlin', lang: 'kotlin' }
 ]
 const data = ref({})
 const { createRepositories, createRepositorySnippet } = useRepository()

@@ -16,6 +16,7 @@
 
 <script setup>
 import XmlTag from './XmlTag.vue'
+import CodeLiteral from './CodeLiteral.vue'
 import CodeString from './CodeString.vue'
 import CodeBrackets from "./CodeBrackets.vue"
 
@@ -35,15 +36,15 @@ defineProps({
 <pre v-if="configuration.lang === 'java'">
 dependency<CodeBrackets start="(" end=")"><CodeString>{{ `${data.groupId}` }}</CodeString>, <CodeString>{{ `${data.artifactId}` }}</CodeString>, <CodeString>{{ `${data.version}` }}</CodeString></CodeBrackets>
 </pre>
+<pre v-else-if="configuration.lang === 'ext'">
+<CodeLiteral>{{ `${data.groupId}:${data.artifactId}:${data.version}` }}</CodeLiteral>
+</pre>
 <pre v-else-if="configuration.lang === 'xml'">
 <XmlTag name="dependency">
   <XmlTag name="groupId">{{ data.groupId }}</XmlTag>
   <XmlTag name="artifactId">{{ data.artifactId }}</XmlTag>
   <XmlTag name="version">{{ data.version }}</XmlTag>
 </XmlTag>
-</pre>
-<pre v-else-if="configuration.lang === 'groovy'">
-implementation <CodeString>{{ `${data.groupId}:${data.artifactId}:${data.version}` }}</CodeString>
 </pre>
 <pre v-else-if="configuration.lang === 'kotlin'">
 implementation<CodeBrackets start="(" end=")"><CodeString>{{ `${data.groupId}:${data.artifactId}:${data.version}` }}</CodeString></CodeBrackets>
