@@ -32,7 +32,10 @@ defineProps({
 </script>
 
 <template>
-<pre v-if="configuration.lang === 'xml'">
+<pre v-if="configuration.lang === 'java'">
+repository<CodeBrackets start="(" end=")"><CodeString>{{ data.domain }}</CodeString></CodeBrackets>
+</pre>
+<pre v-else-if="configuration.lang === 'xml'">
 <XmlTag name="repository">
   <XmlTag name="id">{{ data.repoId }}</XmlTag>
   <XmlTag name="name">{{ data.title }}</XmlTag>
@@ -48,10 +51,5 @@ maven <CodeBrackets start="{" end="}">
 maven <CodeBrackets start="{" end="}">
     url = uri<CodeBrackets start="(" end=")"><CodeString>{{ data.domain }}</CodeString></CodeBrackets>
 </CodeBrackets>
-</pre>
-<pre v-else-if="configuration.lang === 'scala'">
-resolvers +=
-  <CodeString>{{data.repoId}}</CodeString>
-     at <CodeString>{{data.domain}}</CodeString>
 </pre>
 </template>

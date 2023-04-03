@@ -32,7 +32,10 @@ defineProps({
 </script>
 
 <template>
-<pre v-if="configuration.lang === 'xml'">
+<pre v-if="configuration.lang === 'java'">
+dependency<CodeBrackets start="(" end=")"><CodeString>{{ `${data.groupId}` }}</CodeString>, <CodeString>{{ `${data.artifactId}` }}</CodeString>, <CodeString>{{ `${data.version}` }}</CodeString></CodeBrackets>
+</pre>
+<pre v-else-if="configuration.lang === 'xml'">
 <XmlTag name="dependency">
   <XmlTag name="groupId">{{ data.groupId }}</XmlTag>
   <XmlTag name="artifactId">{{ data.artifactId }}</XmlTag>
@@ -44,8 +47,5 @@ implementation <CodeString>{{ `${data.groupId}:${data.artifactId}:${data.version
 </pre>
 <pre v-else-if="configuration.lang === 'kotlin'">
 implementation<CodeBrackets start="(" end=")"><CodeString>{{ `${data.groupId}:${data.artifactId}:${data.version}` }}</CodeString></CodeBrackets>
-</pre>
-<pre v-else-if="configuration.lang === 'scala'">
-<CodeString>{{data.groupId}}</CodeString> %% <CodeString>{{data.artifactId}}</CodeString> %% <CodeString>{{data.version}}</CodeString>
 </pre>
 </template>

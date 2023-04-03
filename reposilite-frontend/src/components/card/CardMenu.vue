@@ -29,7 +29,7 @@ const emit = defineEmits([
   'selectTab'
 ])
 
-const selectedTab = ref(localStorage.getItem('card-tab') || 'Maven')
+const selectedTab = ref(localStorage.getItem('card-tab') || 'bld')
 watchEffect(() => {
   localStorage.setItem('card-tab', selectedTab.value)
   emit('selectTab', selectedTab.value)

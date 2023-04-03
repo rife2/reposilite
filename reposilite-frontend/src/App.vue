@@ -36,12 +36,12 @@ initializeSession().catch(() => {})
 
 <template>
   <div v-bind:class="{ 'dark': theme.isDark }">
-    <div class="min-h-screen dark:bg-black dark:text-white">
+    <div class="min-h-screen dark:bg-blackish dark:text-white">
       <router-view 
         class="router-view-full "
         :qualifier="qualifier"
       />
-      <div v-if="icpLicense" class="absolute h-8 pb-2 w-full text-center text-xs dark:bg-black dark:text-white">
+      <div v-if="icpLicense" class="absolute h-8 pb-2 w-full text-center text-xs dark:bg-blackish dark:text-white">
         <a href="https://beian.miit.gov.cn" target="_blank">{{ icpLicense }}</a>
       </div>
     </div>
@@ -52,7 +52,7 @@ initializeSession().catch(() => {})
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
 
 html, body {
-  @apply bg-gray-100 dark:bg-black;
+  @apply bg-gray-100 dark:bg-blackish;
 }
 #app {
   font-family: 'Open Sans', sans-serif;

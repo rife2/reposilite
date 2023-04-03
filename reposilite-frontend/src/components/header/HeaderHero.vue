@@ -22,7 +22,7 @@ const { description, organizationWebsite, organizationLogo } = usePlaceholders()
 </script>
 
 <template>
-  <div class="bg-gray-100 dark:bg-black">
+  <div class="bg-gray-100 dark:bg-blackish">
     <div class="container mx-auto flex flex-row <sm:(flex-col items-center)">
       <div class="w-35 <sm:mb-2">
         <img class="border-2 rounded-full dark:border-gray-700" :src="organizationLogo">

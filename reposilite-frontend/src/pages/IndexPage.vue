@@ -66,7 +66,7 @@ const selectHomepage = () =>
 <template>
   <div>
     <DefaultHeader :logoClickCallback="selectHomepage" />
-    <div class="bg-gray-100 dark:bg-black overflow-y-visible">
+    <div class="bg-gray-100 dark:bg-blackish overflow-y-visible">
       <div class="container mx-auto <sm:px-0">
         <Tabs 
           v-model="selectedTab"
@@ -121,7 +121,7 @@ const selectHomepage = () =>
   @apply pt-1.5;
   @apply cursor-pointer;
   @apply text-gray-600 dark:text-gray-300;
-  @apply bg-gray-100 dark:bg-black;
+  @apply bg-gray-100 dark:bg-blackish;
 }
 .selected {
   @apply border-b-2;

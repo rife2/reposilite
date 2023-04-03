@@ -144,7 +144,7 @@ const formsConfiguration = {
   @apply pt-1.5;
   @apply cursor-pointer;
   @apply text-gray-600 dark:text-gray-300;
-  @apply bg-gray-100 dark:bg-black;
+  @apply bg-gray-100 dark:bg-blackish;
 }
 .tabs .item:hover {
   @apply bg-gray-150 dark:bg-gray-900;

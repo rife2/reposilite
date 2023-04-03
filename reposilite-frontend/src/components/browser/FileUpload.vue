@@ -104,7 +104,7 @@ const uploadFiles = () => {
       class="
         border border-dashed mt-1.5 cursor-pointer
         bg-gray-50 border-gray-300 hover:(transition-colors duration-200 bg-white)
-        dark:bg-black dark:border-gray-800 dark:hover:(transition-colors duration-400 bg-gray-900)
+        dark:bg-blackish dark:border-gray-800 dark:hover:(transition-colors duration-400 bg-gray-900)
       "
     >
       <FileUpload
@@ -143,7 +143,7 @@ const uploadFiles = () => {
             <input type="checkbox" v-model="stubPomEnabled" class="mb-1 ml-1 dark:bg-gray-900" />
             <span class="pl-3" @click="stubPomEnabled = !stubPomEnabled" >Generate stub POM file</span>
           </div>
-          <div v-if="stubPomEnabled" class="pom-form mt-4 border px-3 pb-3 pt-1 bg-gray-100 dark:bg-black dark:border-gray-800 rounded">
+          <div v-if="stubPomEnabled" class="pom-form mt-4 border px-3 pb-3 pt-1 bg-gray-100 dark:bg-blackish dark:border-gray-800 rounded">
             <div>
               <label>Group</label>
               <input v-model="groupId" placeholder="com.dzikoysk" required/>
@@ -173,7 +173,7 @@ const uploadFiles = () => {
           class="
             border text-sm py-1.5 h-9 px-4 mt-2 border-dashed rounded
             bg-gray-50  border-gray-400 hover:(transition-colors duration-200 bg-purple-500 text-white)
-            dark:bg-black dark:border-gray-700 dark:text-white dark:hover:(transition-colors duration-200 bg-purple-700)
+            dark:bg-blackish dark:border-gray-700 dark:text-white dark:hover:(transition-colors duration-200 bg-purple-700)
           "
         >
           <span>Upload files </span>

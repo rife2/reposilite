@@ -132,3 +132,4 @@ log.txt
 
 # Fleet
 .fleet/
+/reposilite-backend/src/test/workspace/plugins/*.jar

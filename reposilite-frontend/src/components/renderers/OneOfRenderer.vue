@@ -166,7 +166,7 @@ export default {
 }
 dialog {
   @apply text-gray-600 dark:text-gray-300;
-  @apply bg-gray-100 dark:bg-black;
+  @apply bg-gray-100 dark:bg-blackish;
   @apply border-gray-200 dark:border-gray-700;
   @apply rounded border-2;
 }

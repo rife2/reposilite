@@ -47,8 +47,8 @@ export default defineConfig({
     },
   },
   shortcuts: {
-    "default-button":
-      "bg-white dark:bg-gray-900 cursor-pointer hover:(transition-color bg-gray-200 dark:bg-gray-800 duration-500)",
+    "default-button": "bg-white dark:bg-gray-900 cursor-pointer hover:(transition-color bg-gray-200 dark:bg-gray-800 duration-500)",
+    "bg-blackish": "bg-[#0d0d0d]"
   },
 })
 
