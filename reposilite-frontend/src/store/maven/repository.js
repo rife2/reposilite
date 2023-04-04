@@ -36,6 +36,8 @@ export default function useRepository() {
 
   const createRepositorySnippet = (name, { repoId, title, domain }) => {
     switch (name) {
+      case "bld": return `repository("${domain}")`
+      case "bld Extension": return `${domain}`
       case "Maven": return `
 <repository>
   <id>${repoId}</id>

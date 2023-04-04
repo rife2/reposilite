@@ -17,6 +17,8 @@
 export default function useArtifact() {
   const createArtifactSnippet = (lang, { groupId, artifactId, version }) => {
     switch (lang) {
+      case "bld": return `dependency("${groupId}", "${artifactId}", "${version}")`
+      case "bld Extension": return `${groupId}:${artifactId}:${version}`
       case "Maven": return `
 <dependency>
   <groupId>${groupId}</groupId>
